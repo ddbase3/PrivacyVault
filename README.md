@@ -1815,3 +1815,9 @@ At the same time, it already defines the extension points needed for later produ
 
 This keeps the first version usable without locking the architecture into the MVP implementation.
 
+
+
+## Documentation
+
+- [Frequently Asked Questions](docs/faq.md)
+- [Privacy and data processing](PRIVACY.md)
