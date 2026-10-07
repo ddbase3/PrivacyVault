@@ -1,0 +1,19 @@
+{
+	"manifestVersion": 1,
+	"name": "PrivacyVault",
+	"namespace": "PrivacyVault",
+	"version": "4.1.0",
+	"description": "Privacy and pseudonymization services for sensitive data in BASE3 applications and AI workflows.",
+	"license": "GPL-3.0-or-later",
+	"maintainers": [
+		{
+			"name": "Daniel Dahme",
+			"url": "https://www.base3.de",
+			"email": "info@base3.de"
+		}
+	],
+	"repository": "https://github.com/ddbase3/PrivacyVault",
+	"dependencies": {
+		"Base3Framework": ">=4.10.0"
+	}
+}
