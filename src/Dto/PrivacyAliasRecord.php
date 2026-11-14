@@ -11,7 +11,7 @@
  * https://www.gnu.org/licenses/gpl-3.0.en.html
  **********************************************************************/
 
-namespace PrivacyVault\Dto;
+namespace Base3\PrivacyVault\Dto;
 
 /**
  * Immutable storage record for one privacy alias.

@@ -11,9 +11,9 @@
  * https://www.gnu.org/licenses/gpl-3.0.en.html
  **********************************************************************/
 
-namespace PrivacyVault\Reference;
+namespace Base3\PrivacyVault\Reference;
 
-use PrivacyVault\Api\IPrivacyReferenceResolver;
+use Base3\PrivacyVault\Api\IPrivacyReferenceResolver;
 
 /**
  * Delegates reference resolution to registered resolver implementations.

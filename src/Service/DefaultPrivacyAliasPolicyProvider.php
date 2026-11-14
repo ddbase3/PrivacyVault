@@ -11,9 +11,9 @@
  * https://www.gnu.org/licenses/gpl-3.0.en.html
  **********************************************************************/
 
-namespace PrivacyVault\Service;
+namespace Base3\PrivacyVault\Service;
 
-use PrivacyVault\Api\IPrivacyAliasPolicyProvider;
+use Base3\PrivacyVault\Api\IPrivacyAliasPolicyProvider;
 
 /**
  * Empty MVP policy provider with a reusable LLM instruction fragment.

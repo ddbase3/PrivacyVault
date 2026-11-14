@@ -11,10 +11,10 @@
  * https://www.gnu.org/licenses/gpl-3.0.en.html
  **********************************************************************/
 
-namespace PrivacyVault\Token;
+namespace Base3\PrivacyVault\Token;
 
-use PrivacyVault\Api\IPrivacyAliasTokenGenerator;
-use PrivacyVault\Value\PrivacyAliasType;
+use Base3\PrivacyVault\Api\IPrivacyAliasTokenGenerator;
+use Base3\PrivacyVault\Value\PrivacyAliasType;
 
 /**
  * Creates non-deterministic alias tokens backed by server-side storage.

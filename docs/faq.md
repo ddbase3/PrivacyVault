@@ -34,7 +34,7 @@ PrivacyVault itself does not call an LLM provider and does not implement an agen
 The primary service interface is:
 
 ```text
-PrivacyVault\Api\IPrivacyAliasService
+Base3\PrivacyVault\Api\IPrivacyAliasService
 ```
 
 It supports:

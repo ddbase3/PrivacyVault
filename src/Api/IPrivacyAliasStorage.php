@@ -11,10 +11,10 @@
  * https://www.gnu.org/licenses/gpl-3.0.en.html
  **********************************************************************/
 
-namespace PrivacyVault\Api;
+namespace Base3\PrivacyVault\Api;
 
-use Base3\Api\IBase;
-use PrivacyVault\Dto\PrivacyAliasRecord;
+use Base3\CoreFoundation\Api\IBase;
+use Base3\PrivacyVault\Dto\PrivacyAliasRecord;
 
 /**
  * Internal storage API for alias records.

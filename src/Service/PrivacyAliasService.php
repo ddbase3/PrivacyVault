@@ -11,19 +11,19 @@
  * https://www.gnu.org/licenses/gpl-3.0.en.html
  **********************************************************************/
 
-namespace PrivacyVault\Service;
+namespace Base3\PrivacyVault\Service;
 
-use PrivacyVault\Api\IPrivacyAliasService;
-use PrivacyVault\Api\IPrivacyAliasStorage;
-use PrivacyVault\Api\IPrivacyAliasTokenGenerator;
-use PrivacyVault\Api\IPrivacyContextProvider;
-use PrivacyVault\Api\IPrivacyReferenceResolver;
-use PrivacyVault\Api\IPrivacyValueCryptor;
-use PrivacyVault\Context\DefaultPrivacyContextProvider;
-use PrivacyVault\Dto\PrivacyAliasRecord;
-use PrivacyVault\Value\PrivacyAliasStorageMode;
-use PrivacyVault\Value\PrivacyAliasType;
-use PrivacyVault\Value\PrivacyValueFormat;
+use Base3\PrivacyVault\Api\IPrivacyAliasService;
+use Base3\PrivacyVault\Api\IPrivacyAliasStorage;
+use Base3\PrivacyVault\Api\IPrivacyAliasTokenGenerator;
+use Base3\PrivacyVault\Api\IPrivacyContextProvider;
+use Base3\PrivacyVault\Api\IPrivacyReferenceResolver;
+use Base3\PrivacyVault\Api\IPrivacyValueCryptor;
+use Base3\PrivacyVault\Context\DefaultPrivacyContextProvider;
+use Base3\PrivacyVault\Dto\PrivacyAliasRecord;
+use Base3\PrivacyVault\Value\PrivacyAliasStorageMode;
+use Base3\PrivacyVault\Value\PrivacyAliasType;
+use Base3\PrivacyVault\Value\PrivacyValueFormat;
 
 /**
  * Default alias service used by tools and output pipelines.

@@ -11,11 +11,11 @@
  * https://www.gnu.org/licenses/gpl-3.0.en.html
  **********************************************************************/
 
-namespace PrivacyVault\Storage;
+namespace Base3\PrivacyVault\Storage;
 
-use Base3\Database\Api\IDatabase;
-use PrivacyVault\Api\IPrivacyAliasStorage;
-use PrivacyVault\Dto\PrivacyAliasRecord;
+use Base3\CoreFoundation\Database\Api\IDatabase;
+use Base3\PrivacyVault\Api\IPrivacyAliasStorage;
+use Base3\PrivacyVault\Dto\PrivacyAliasRecord;
 
 /**
  * Database-backed alias storage for the MVP.

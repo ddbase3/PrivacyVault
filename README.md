@@ -201,28 +201,28 @@ PrivacyVault/
 ```php
 <?php declare(strict_types=1);
 
-namespace PrivacyVault;
+namespace Base3\PrivacyVault;
 
-use Base3\Accesscontrol\Api\IAccesscontrol;
-use Base3\Api\IContainer;
-use Base3\Api\IPlugin;
-use Base3\Database\Api\IDatabase;
-use Base3\Session\Api\ISession;
-use Base3\Usermanager\Api\IUsermanager;
-use PrivacyVault\Api\IPrivacyAliasPolicyProvider;
-use PrivacyVault\Api\IPrivacyAliasService;
-use PrivacyVault\Api\IPrivacyAliasStorage;
-use PrivacyVault\Api\IPrivacyAliasTokenGenerator;
-use PrivacyVault\Api\IPrivacyContextProvider;
-use PrivacyVault\Api\IPrivacyReferenceResolver;
-use PrivacyVault\Api\IPrivacyValueCryptor;
-use PrivacyVault\Context\DefaultPrivacyContextProvider;
-use PrivacyVault\Cryptor\NullPrivacyValueCryptor;
-use PrivacyVault\Reference\CompositePrivacyReferenceResolver;
-use PrivacyVault\Service\DefaultPrivacyAliasPolicyProvider;
-use PrivacyVault\Service\PrivacyAliasService;
-use PrivacyVault\Storage\DatabasePrivacyAliasStorage;
-use PrivacyVault\Token\RandomPrivacyAliasTokenGenerator;
+use Base3\CoreFoundation\Accesscontrol\Api\IAccesscontrol;
+use Base3\CoreFoundation\Api\IContainer;
+use Base3\CoreFoundation\Api\IPlugin;
+use Base3\CoreFoundation\Database\Api\IDatabase;
+use Base3\CoreFoundation\Session\Api\ISession;
+use Base3\CoreFoundation\Usermanager\Api\IUsermanager;
+use Base3\PrivacyVault\Api\IPrivacyAliasPolicyProvider;
+use Base3\PrivacyVault\Api\IPrivacyAliasService;
+use Base3\PrivacyVault\Api\IPrivacyAliasStorage;
+use Base3\PrivacyVault\Api\IPrivacyAliasTokenGenerator;
+use Base3\PrivacyVault\Api\IPrivacyContextProvider;
+use Base3\PrivacyVault\Api\IPrivacyReferenceResolver;
+use Base3\PrivacyVault\Api\IPrivacyValueCryptor;
+use Base3\PrivacyVault\Context\DefaultPrivacyContextProvider;
+use Base3\PrivacyVault\Cryptor\NullPrivacyValueCryptor;
+use Base3\PrivacyVault\Reference\CompositePrivacyReferenceResolver;
+use Base3\PrivacyVault\Service\DefaultPrivacyAliasPolicyProvider;
+use Base3\PrivacyVault\Service\PrivacyAliasService;
+use Base3\PrivacyVault\Storage\DatabasePrivacyAliasStorage;
+use Base3\PrivacyVault\Token\RandomPrivacyAliasTokenGenerator;
 
 class PrivacyVaultPlugin implements IPlugin {
 
@@ -266,9 +266,9 @@ The main public interface is `IPrivacyAliasService`.
 ```php
 <?php declare(strict_types=1);
 
-namespace PrivacyVault\Api;
+namespace Base3\PrivacyVault\Api;
 
-use Base3\Api\IBase;
+use Base3\CoreFoundation\Api\IBase;
 
 interface IPrivacyAliasService extends IBase {
 
@@ -315,7 +315,7 @@ A typical BASE3 integration retrieves the service from the container.
 ```php
 <?php declare(strict_types=1);
 
-use PrivacyVault\Api\IPrivacyAliasService;
+use Base3\PrivacyVault\Api\IPrivacyAliasService;
 
 /** @var IPrivacyAliasService $privacyAliasService */
 $privacyAliasService = $container->get(IPrivacyAliasService::class);
@@ -408,7 +408,7 @@ This allows tool code to use PrivacyVault without manually constructing `user_id
 ```php
 <?php declare(strict_types=1);
 
-use PrivacyVault\Api\IPrivacyAliasService;
+use Base3\PrivacyVault\Api\IPrivacyAliasService;
 
 /** @var IPrivacyAliasService $privacyAliasService */
 $privacyAliasService = $container->get(IPrivacyAliasService::class);
@@ -452,8 +452,8 @@ Use `createAliasForCurrentContext()` for the normal MVP path.
 ```php
 <?php declare(strict_types=1);
 
-use PrivacyVault\Api\IPrivacyAliasService;
-use PrivacyVault\Value\PrivacyAliasType;
+use Base3\PrivacyVault\Api\IPrivacyAliasService;
+use Base3\PrivacyVault\Value\PrivacyAliasType;
 
 /** @var IPrivacyAliasService $privacyAliasService */
 $privacyAliasService = $container->get(IPrivacyAliasService::class);
@@ -485,8 +485,8 @@ Explicit context is useful for tests, CLI jobs, queue workers or integrations th
 ```php
 <?php declare(strict_types=1);
 
-use PrivacyVault\Api\IPrivacyAliasService;
-use PrivacyVault\Value\PrivacyAliasType;
+use Base3\PrivacyVault\Api\IPrivacyAliasService;
+use Base3\PrivacyVault\Value\PrivacyAliasType;
 
 /** @var IPrivacyAliasService $privacyAliasService */
 $privacyAliasService = $container->get(IPrivacyAliasService::class);
@@ -510,8 +510,8 @@ In the MVP, tools can manually pseudonymize fields before returning results to t
 ```php
 <?php declare(strict_types=1);
 
-use PrivacyVault\Api\IPrivacyAliasService;
-use PrivacyVault\Value\PrivacyAliasType;
+use Base3\PrivacyVault\Api\IPrivacyAliasService;
+use Base3\PrivacyVault\Value\PrivacyAliasType;
 
 class CourseCompletionTool {
 
@@ -663,7 +663,7 @@ The MVP deliberately does not derive the suffix from the protected value.
 ```php
 <?php declare(strict_types=1);
 
-namespace PrivacyVault\Value;
+namespace Base3\PrivacyVault\Value;
 
 final class PrivacyAliasType {
 
@@ -805,8 +805,8 @@ Example:
 ```php
 <?php declare(strict_types=1);
 
-use PrivacyVault\Api\IPrivacyAliasService;
-use PrivacyVault\Value\PrivacyAliasType;
+use Base3\PrivacyVault\Api\IPrivacyAliasService;
+use Base3\PrivacyVault\Value\PrivacyAliasType;
 
 /** @var IPrivacyAliasService $privacyAliasService */
 $privacyAliasService = $container->get(IPrivacyAliasService::class);
@@ -869,8 +869,8 @@ A resolver implements `IPrivacyReferenceResolver`.
 
 namespace Acme\Privacy;
 
-use Base3\Database\Api\IDatabase;
-use PrivacyVault\Api\IPrivacyReferenceResolver;
+use Base3\CoreFoundation\Database\Api\IDatabase;
+use Base3\PrivacyVault\Api\IPrivacyReferenceResolver;
 
 class IliasUserPrivacyReferenceResolver implements IPrivacyReferenceResolver {
 
@@ -933,9 +933,9 @@ if ($column === null) {
 ```php
 <?php declare(strict_types=1);
 
-namespace PrivacyVault\Api;
+namespace Base3\PrivacyVault\Api;
 
-use Base3\Api\IBase;
+use Base3\CoreFoundation\Api\IBase;
 
 interface IPrivacyValueCryptor extends IBase {
 
@@ -952,10 +952,10 @@ The MVP uses `NullPrivacyValueCryptor`.
 ```php
 <?php declare(strict_types=1);
 
-namespace PrivacyVault\Cryptor;
+namespace Base3\PrivacyVault\Cryptor;
 
-use PrivacyVault\Api\IPrivacyValueCryptor;
-use PrivacyVault\Value\PrivacyValueFormat;
+use Base3\PrivacyVault\Api\IPrivacyValueCryptor;
+use Base3\PrivacyVault\Value\PrivacyValueFormat;
 
 class NullPrivacyValueCryptor implements IPrivacyValueCryptor {
 
@@ -1051,9 +1051,9 @@ This is not part of the MVP.
 ```php
 <?php declare(strict_types=1);
 
-namespace PrivacyVault\Api;
+namespace Base3\PrivacyVault\Api;
 
-use Base3\Api\IBase;
+use Base3\CoreFoundation\Api\IBase;
 
 interface IPrivacyAliasTokenGenerator extends IBase {
 
@@ -1471,8 +1471,8 @@ Future versions may expose this through a service method or maintenance task.
 
 namespace Acme\CourseAgent\Tool;
 
-use PrivacyVault\Api\IPrivacyAliasService;
-use PrivacyVault\Value\PrivacyAliasType;
+use Base3\PrivacyVault\Api\IPrivacyAliasService;
+use Base3\PrivacyVault\Value\PrivacyAliasType;
 
 class MissingCourseUsersTool {
 
@@ -1570,7 +1570,7 @@ A simple server-side output filter can be implemented like this:
 
 namespace Acme\Privacy;
 
-use PrivacyVault\Api\IPrivacyAliasService;
+use Base3\PrivacyVault\Api\IPrivacyAliasService;
 
 class PrivacyOutputFilter {
 
@@ -1598,8 +1598,8 @@ return $finalAnswer;
 ```php
 <?php declare(strict_types=1);
 
-use PrivacyVault\Api\IPrivacyAliasService;
-use PrivacyVault\Value\PrivacyAliasType;
+use Base3\PrivacyVault\Api\IPrivacyAliasService;
+use Base3\PrivacyVault\Value\PrivacyAliasType;
 
 /** @var IPrivacyAliasService $privacyAliasService */
 $privacyAliasService = $container->get(IPrivacyAliasService::class);

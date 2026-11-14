@@ -1,7 +1,7 @@
 {
 	"manifestVersion": 1,
 	"name": "PrivacyVault",
-	"namespace": "PrivacyVault",
+	"namespace": "Base3\\PrivacyVault",
 	"version": "4.1.0",
 	"description": "Privacy and pseudonymization services for sensitive data in BASE3 applications and AI workflows.",
 	"license": "GPL-3.0-or-later",
@@ -14,6 +14,6 @@
 	],
 	"repository": "https://github.com/ddbase3/PrivacyVault",
 	"dependencies": {
-		"Base3Framework": ">=4.10.0"
+		"CoreFoundation": ">=4.10.0"
 	}
 }

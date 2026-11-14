@@ -11,12 +11,12 @@
  * https://www.gnu.org/licenses/gpl-3.0.en.html
  **********************************************************************/
 
-namespace PrivacyVault\Context;
+namespace Base3\PrivacyVault\Context;
 
-use Base3\Accesscontrol\Api\IAccesscontrol;
-use Base3\Session\Api\ISession;
-use Base3\Usermanager\Api\IUsermanager;
-use PrivacyVault\Api\IPrivacyContextProvider;
+use Base3\CoreFoundation\Accesscontrol\Api\IAccesscontrol;
+use Base3\CoreFoundation\Session\Api\ISession;
+use Base3\CoreFoundation\Usermanager\Api\IUsermanager;
+use Base3\PrivacyVault\Api\IPrivacyContextProvider;
 
 /**
  * Builds a minimal privacy context from BASE3 user and session services.

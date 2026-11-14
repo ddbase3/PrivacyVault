@@ -11,10 +11,10 @@
  * https://www.gnu.org/licenses/gpl-3.0.en.html
  **********************************************************************/
 
-namespace PrivacyVault\Cryptor;
+namespace Base3\PrivacyVault\Cryptor;
 
-use PrivacyVault\Api\IPrivacyValueCryptor;
-use PrivacyVault\Value\PrivacyValueFormat;
+use Base3\PrivacyVault\Api\IPrivacyValueCryptor;
+use Base3\PrivacyVault\Value\PrivacyValueFormat;
 
 /**
  * MVP cryptor that stores values unchanged behind the cryptor interface.

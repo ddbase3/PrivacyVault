@@ -11,9 +11,9 @@
  * https://www.gnu.org/licenses/gpl-3.0.en.html
  **********************************************************************/
 
-namespace PrivacyVault\Api;
+namespace Base3\PrivacyVault\Api;
 
-use Base3\Api\IBase;
+use Base3\CoreFoundation\Api\IBase;
 
 /**
  * Provides the context used to bind aliases to the current user/session.

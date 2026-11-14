@@ -11,28 +11,28 @@
  * https://www.gnu.org/licenses/gpl-3.0.en.html
  **********************************************************************/
 
-namespace PrivacyVault;
+namespace Base3\PrivacyVault;
 
-use Base3\Accesscontrol\Api\IAccesscontrol;
-use Base3\Api\IContainer;
-use Base3\Api\IPlugin;
-use Base3\Database\Api\IDatabase;
-use Base3\Session\Api\ISession;
-use Base3\Usermanager\Api\IUsermanager;
-use PrivacyVault\Api\IPrivacyAliasPolicyProvider;
-use PrivacyVault\Api\IPrivacyAliasService;
-use PrivacyVault\Api\IPrivacyAliasStorage;
-use PrivacyVault\Api\IPrivacyAliasTokenGenerator;
-use PrivacyVault\Api\IPrivacyContextProvider;
-use PrivacyVault\Api\IPrivacyReferenceResolver;
-use PrivacyVault\Api\IPrivacyValueCryptor;
-use PrivacyVault\Context\DefaultPrivacyContextProvider;
-use PrivacyVault\Cryptor\NullPrivacyValueCryptor;
-use PrivacyVault\Reference\CompositePrivacyReferenceResolver;
-use PrivacyVault\Service\DefaultPrivacyAliasPolicyProvider;
-use PrivacyVault\Service\PrivacyAliasService;
-use PrivacyVault\Storage\DatabasePrivacyAliasStorage;
-use PrivacyVault\Token\RandomPrivacyAliasTokenGenerator;
+use Base3\CoreFoundation\Accesscontrol\Api\IAccesscontrol;
+use Base3\CoreFoundation\Api\IContainer;
+use Base3\CoreFoundation\Api\IPlugin;
+use Base3\CoreFoundation\Database\Api\IDatabase;
+use Base3\CoreFoundation\Session\Api\ISession;
+use Base3\CoreFoundation\Usermanager\Api\IUsermanager;
+use Base3\PrivacyVault\Api\IPrivacyAliasPolicyProvider;
+use Base3\PrivacyVault\Api\IPrivacyAliasService;
+use Base3\PrivacyVault\Api\IPrivacyAliasStorage;
+use Base3\PrivacyVault\Api\IPrivacyAliasTokenGenerator;
+use Base3\PrivacyVault\Api\IPrivacyContextProvider;
+use Base3\PrivacyVault\Api\IPrivacyReferenceResolver;
+use Base3\PrivacyVault\Api\IPrivacyValueCryptor;
+use Base3\PrivacyVault\Context\DefaultPrivacyContextProvider;
+use Base3\PrivacyVault\Cryptor\NullPrivacyValueCryptor;
+use Base3\PrivacyVault\Reference\CompositePrivacyReferenceResolver;
+use Base3\PrivacyVault\Service\DefaultPrivacyAliasPolicyProvider;
+use Base3\PrivacyVault\Service\PrivacyAliasService;
+use Base3\PrivacyVault\Storage\DatabasePrivacyAliasStorage;
+use Base3\PrivacyVault\Token\RandomPrivacyAliasTokenGenerator;
 
 /**
  * BASE3 plugin entry point for PrivacyVault.
